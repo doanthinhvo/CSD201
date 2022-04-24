@@ -16,4 +16,4 @@ Các bài tập trong từng chủ đề được lấy theo learning website c�
 Những nội dung in nghiêng là nội dung để thi PE, cần nắm chắc các phần này. 
 Các nội dung còn lại chủ yếu phục vụ mục đích thi FE. 
 
-Ngoài ra 2 folder, Ex
+Ngoài ra 2 folder, Excersise_prepare_for_assignment1
