@@ -6,8 +6,8 @@ Các bài tập trong từng chủ đề được lấy theo learning website c�
 | --------------- | -------------------------- |
 | *Linked List*   | LinkedList & LinkedListObj |
 | Stack & Queue   |                            |
-| Recursion       |                            |
-| *Trees*         |                            |
+| Recursion       | Recursion                  |
+| *Trees*         | BST                        |
 | *Graphs*        |                            |
 | Sorting         |                            |
 | Hashing         |                            |
