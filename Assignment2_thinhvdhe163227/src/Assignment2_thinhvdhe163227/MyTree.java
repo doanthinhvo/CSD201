@@ -275,6 +275,7 @@ public class MyTree {
 //For example, the output must be:
 //(A6, 1) (A2, 5) (A1, 2) (A5, 5) (A4, 7) (A3, 7) (A9, 6) (A7, 3) (A8, 4) (A91, 2)         
           // Find third node having non-empty right-son 
+          
           int count = 0;
           Node a = null; 
           void searchNodeByPreOrder(Node p) {
