@@ -8,7 +8,7 @@ Các bài tập trong từng chủ đề được lấy theo learning website c�
 | Stack & Queue   |                            |
 | Recursion       | Recursion                  |
 | *Trees*         | BST                        |
-| *Graphs*        |                            |
+| *Graphs*        | Graph                      |
 | Sorting         |                            |
 | Hashing         |                            |
 | Text Processing |                            |
