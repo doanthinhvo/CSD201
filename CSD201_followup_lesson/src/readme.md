@@ -2,10 +2,18 @@ IMPORTANT:
 
 Folder này tổng hợp code theo các chủ đề
 Các bài tập trong từng chủ đề được lấy theo learning website của môn này. 
-| Nội dung | Folder |
-| -------- | ------ |
-|    |        |
-1. 
+| Nội dung        | Folder |
+| --------------- | ------ |
+| *Linked List*   |        |
+| Stack & Queue   |        |
+| Recursion       |        |
+| *Trees*         |        |
+| *Graphs*        |        |
+| Sorting         |        |
+| Hashing         |        |
+| Text Processing |        |
+|                 |        |
+1. *Linked List*
 2. Stack&Queue
 3. Recursion
 4. *Trees* 
