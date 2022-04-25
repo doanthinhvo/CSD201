@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CSD201_followup_lesson/src/readme.md",
+            "file": "readme.md",
             "mode": "source"
           }
         }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5a1d256c86ecc2c9",
@@ -69,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CSD201_followup_lesson/src/readme.md",
+                "file": "readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +88,7 @@
   },
   "active": "d3d9836fa4913cd9",
   "lastOpenFiles": [
+    "readme.md",
     "CSD201_followup_lesson/src/readme.md"
   ]
 }
