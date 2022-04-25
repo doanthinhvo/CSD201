@@ -165,9 +165,9 @@ public class MyTree {
           
           //delete by node p
           public void deleteByCopy(Node p) {
-                    System.out.println(" Node p is " + p.info) ;
+//                    System.out.println(" Node p is " + p.info) ;
                     if (isEmpty()) {
-                              System.out.println("emptyh roi ");
+//                              System.out.println("emptyh roi ");
                               return;
                     }
                     if (p == null) {
@@ -199,26 +199,26 @@ public class MyTree {
                                         f.right = null;
                               }
                               
-                              System.out.println("Hello wwwwww");
+//                              System.out.println("Hello wwwwww");
                     } // 2. p has a left child only
                     else if (p.left != null && p.right == null) {
                               if (f == null) {// remove root
                                         root = p.left;
                               } 
-                              if (f.right == null || f.left == null) System.out.println("f have no child");
-                              System.out.println("father of A5, 5 is " + f.info);
+//                              if (f.right == null || f.left == null) System.out.println("f have no child");
+//                              System.out.println("father of A5, 5 is " + f.info);
 //                              System.out.println("f.right  = "  + f.right.info) ;
 //                              System.out.println("f.left = " + f.left.info);
                               if (f.right == p) {
                                         f.right = p.left;
-                                        System.out.println("p is right child of f ");
+//                                        System.out.println("p is right child of f ");
                               } 
                               else if  (f.left == p) {
                                         f.left = p.left;
-                                        System.out.println("p is left child of f");
+//                                        System.out.println("p is left child of f");
                               }
 //                              else System.out.println("ao vai");
-                              System.out.println("hello word");
+//                              System.out.println("hello word");
                     } // 3. p has a right child only
                     else if (p.right != null && p.left == null) {
                               if (f == null) {// remove root
@@ -228,7 +228,7 @@ public class MyTree {
                               } else if (f.left == p) {
                                         f.left = p.right;
                               }
-                              System.out.println("Hello wod ");
+//                              System.out.println("Hello wod ");
                     } // 4. Both of right and left child 
                     else if (p.left != null && p.right != null) {
                               f = null;
@@ -243,7 +243,7 @@ public class MyTree {
                               } else {
                                         f.right = rp.left;
                               }
-                              System.out.println("Else cuoi ");
+//                              System.out.println("Else cuoi ");
                     }
           }
 

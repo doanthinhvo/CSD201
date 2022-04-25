@@ -28,13 +28,7 @@ public class Main {
                     tree.insert("A91", 2);
                     tree.insert("A11", 11); 
 //                    tree.traverse();
-//                    tree.BFS(tree.root);
-                    tree.delete();
-                    System.out.println("");
-//                    tree.postorder(tree.root);
-//                    tree.BFS(tree.root);
-//                    tree.deleteByCopy(null);
 //                    tree.delete();
-//                    tree.rotateLeft();
+                    tree.rotateLeft();
           }
 }
