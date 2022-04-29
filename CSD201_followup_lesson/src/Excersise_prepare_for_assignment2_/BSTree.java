@@ -15,17 +15,14 @@ import java.io.RandomAccessFile;
 public class BSTree {
           public static void main(String[] args) throws FileNotFoundException, Exception {
                     MyTree tree = new MyTree();
-                    tree.insert("a", 9);
-                    tree.insert("gdda", 9);
-                    tree.insert("c", 9);
-                    tree.insert("d", 9);
-                    tree.insert("e", 9);
-                    tree.insert("f", 9);
-                    String fname = "q2.txt";
-                    RandomAccessFile f = new RandomAccessFile(fname, "rw");
-//                    tree.preOrder();
-//                    tree.postOrder();
-//                    tree.postOrder3();
-                    tree.preOrder2(tree.root, f);
+                    tree.insert("d", 50);
+                    tree.insert("b", 14);
+                    tree.insert("a", 60);
+                    tree.insert("c", 20);
+                    tree.insert("e", 10);
+                    tree.insert("f", 80);
+                    tree.insert("g", 15);
+                    tree.BalanceFactorBFS(tree.root);
+                    tree.preOrder();
           }
 }

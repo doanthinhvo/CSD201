@@ -34,6 +34,8 @@
  ||     ||______//sort by integer/ double
  ||     ||______//sort by for
  ||     ||______//sort 3 first element 
+ ||     ||______// sort by start/ end index
+ ||
  ||
  ||___SWAP______//swap min max
  ||     ||______//swap node max second with node min first
@@ -43,7 +45,7 @@
  ||
  ||___ORTHER____//traverse
  ||       ||____//replace a node
- ||       ||____//count number of node
+ ||       ||____//count number of nodecount
  ||       ||____//reverse list
  ||       ||____//append another list
  ||       ||____//change name first
@@ -328,7 +330,21 @@
 		}
     }
 	
-//sort by integer/ double
+ // sort by start/ end index
+                    void sort(int start, int end) {
+                           for (int i = start; i < end; i++) {
+                               for (int j = i+1; j <= end; j++) {
+                                   if (get(i).info.type < get(j).info.type) {
+                                       Corn tmp = get(i).info;
+                                       get(i).info = get(j).info;
+                                       get(j).info = tmp;
+                                   }
+                               }
+                           }
+                       }
+ 
+ //sort by integer/ double
+
 	public void sort() {
 		Node pi,pj; Car x;
 		pi=head;
@@ -452,17 +468,17 @@
               p.info.name = yName;// yName was given
         }
 	}
-	
-//count number of node
-	int count(Node p)
-	 {if(p==null) return(0);
-	   int k,h,r;
-	   k = count(p.left);
-	   h = count(p.right);
-	   r = k+h+1;
-	   return(r);
-	 }
-	
+ 
+ // size
+ public int size() {
+                    Node p = head;
+                    int  count = 0;
+                    while (p != null){ 
+                              count++; 
+                              p = p.next;
+                    }
+                    return count;          
+          }
 //reverse list
 	public void reverse() {
         int n = size(), i, j;

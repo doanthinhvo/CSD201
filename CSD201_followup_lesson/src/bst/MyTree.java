@@ -287,8 +287,8 @@ public class MyTree {
 //12. Node max() - find and return the node with maximum value in the tree. 
           Node max() {
                     Node current = root;
-                    while (current.left != null) {
-                              current = current.left;
+                    while (current.right != null) {
+                              current = current.right;
                     }
 
                     return current;

@@ -43,7 +43,7 @@ public class MyTree {
                                         return;
                               }
                               parent = p; // lưu vết vị trí node cha thích hợp 
-                              if (p.info.name.compareTo(xName) < 0) {
+                              if (p.info.name.compareTo(xName) > 0) { // chuẩn chỉ rồi. 
                                         p = p.left; // p = null nghĩa là nó đã xuống tận cùng (vị trí thích hợp trong cây).
                               } else {
                                         p = p.right; // p = null nghĩa là nó đã xuống tận cùng (vị trí thích hợp trong cây).
@@ -53,7 +53,7 @@ public class MyTree {
                     // sau bước while ở trên thì ta biết chắc chắn cái node cần insert là con của node cha nào. 
                     // add giá trị x vào con của parent
                     // cần xác định x là con trái hay con phải của parent
-                    if (parent.info.name.compareTo(xName) < 0) {
+                    if (parent.info.name.compareTo(xName) > 0) {
                               parent.left = new Node(xName, xAge);
                     } else {
                               parent.right = new Node(xName, xAge);
@@ -78,7 +78,7 @@ public class MyTree {
                     preOrder(root);
                     System.out.println();
           }
-          
+
 //2. Save all elements having age < the average age of the tree in format (name,
 //age) to the file “q2.txt” by post-order traverse.
 
@@ -227,17 +227,20 @@ public class MyTree {
           }
 //6. Perform breadth-first traverse from the root and delete by copying the
 //second node having age >= the average age.
+
           void delete() {
                     Node p = searchNodeByBFS(root); // tìm node 
                     deleteByCopy(p); // xoá node 
                     BFS(root); // in ra 
           }
-          double  avg() {
+
+          double avg() {
                     if (root == null) {
                               return 0;
                     }
                     return 1.0 * sum(root) / count(root);
           }
+
           int sum(Node p) { // muốn gọi đệ quy lên từng node thì hàm này phải có tham số
                     // co can static khong? 
                     if (p == null) {
@@ -245,7 +248,7 @@ public class MyTree {
                     }
                     return p.info.age + sum(p.left) + sum(p.right);
           }
-          
+
           // Tìm node bằng BFS 
           Node searchNodeByBFS(Node p) {
                     // check empty
@@ -274,11 +277,8 @@ public class MyTree {
                     return null;
           }
 
-
           //delete by node p
           // already defind above
-
-          
           // BFS để in ra 
           void BFS(Node p) { //input root
                     if (p == null) {
@@ -300,53 +300,155 @@ public class MyTree {
 //7. Check if the root having non-empty left-son then rotate it to right about its
 //left-son.
 //
-          void rotateRoot(){
-                    if (isEmpty()) return;
-                    else {
+
+          void rotateRoot() {
+                    if (isEmpty()) {
+                              return;
+                    } else {
                               Node p = nodeRotateRight(root);
                               rotateRight(p);
                     }
           }
-          Node parent(Node p){
+
+          Node parent(Node p) {
                     Node f, q;
-                    f = null; q = root;
-                    while (q!=null){
-                              if (q == p) break;
+                    f = null;
+                    q = root;
+                    while (q != null) {
+                              if (q == p) {
+                                        break;
+                              }
                               f = q;
-                              if (q.info.name.compareTo(p.info.name) > 0) q = q.left;
-                              else q = q.right;
+                              if (q.info.name.compareTo(p.info.name) > 0) {
+                                        q = q.left;
+                              } else {
+                                        q = q.right;
+                              }
                     }
                     return f;
           }
-          
-          Node nodeRotateRight(Node p){
-                    if(p.left == null) return p;
+
+          Node nodeRotateRight(Node p) {
+                    if (p.left == null) { // điều kiện trong đề bài là chỉ xoay root có con trái khác null.
+                              return p;
+                    }
                     Node q = p.left;
                     p.left = q.right;
                     q.right = p;
                     return q;
           }
-          
-          void rotateRight(Node a){ // định hình lại cả cây (node p sau khi rotate link với parent nào)
-                    Node  b = nodeRotateRight(a);
-                    if (a == root){ // nếu ban đầu vị trí node cần xoay là root thì sau khi xoay node mới ở vị trí đó chính là root.
+
+          void rotateRight(Node a) { // định hình lại cả cây (node p sau khi rotate link với parent nào)
+                    Node b = nodeRotateRight(a);
+                    if (a == root) { // nếu ban đầu vị trí node cần xoay là root thì sau khi xoay node mới ở vị trí đó chính là root.
                               root = b;
                               return;
                     }
                     Node par = parent(a); // cha của vị trí muốn rotate. 
-                    if (par.info.name.compareTo(b.info.name) > 0 ){
+                    if (par.info.name.compareTo(b.info.name) > 0) {
                               par.left = b;
-                    }
-                    else 
+                    } else {
                               par.right = b;
+                    }
           }
 //8. Perform pre-order traverse from the root, rotate the third node having non-
 //empty right-son then rotate it to left about its right-son and display the tree
 //to the output screen.
+          int count = 0;
+          Node a = null;
+
+          void searchNodeByPreOrder(Node p) {
+                    if (p == null) {
+                              return;
+                    }
+//                    visit(p);
+                    if (p.right != null) {
+                              count++;
+//                              System.out.println(count);
+                    }
+                    if (count == 3) {
+//                              System.out.println(p.right.info);
+                              a = p;
+                              return;
+                    }
+                    searchNodeByPreOrder(p.left); // dừng gọi đệ quy khi mà xuống đến dưới cùng (p.left == null)
+                    searchNodeByPreOrder(p.right);
+          }
+
+          // parent of one node 
+          // already define above
+          // Rotate left 
+          Node nodeRotateLeft(Node p) { // định hình node p sau khi rotate (nó link với left right nào) (nó link với con nào)
+                    if (p.right == null) {
+                              return p;
+                    }
+                    Node p1 = p.right;
+                    p.right = p1.left; // gắn right mới cho node cũ ở trí muốn rotate
+                    p1.left = p; // gắn left mới cho node mới được trám vào vị trí muốn rotate. 
+                    return p1;
+          }
+
+          void rotateLeft1(Node a) { // định hình lại cả cây (node p sau khi rotate link với parent nào)
+                    Node b = nodeRotateLeft(a);
+                    if (a == root) { // nếu ban đầu vị trí node cần xoay là root thì sau khi xoay node mới ở vị trí đó chính là root.
+                              root = b;
+                              return;
+                    }
+                    Node par = parent(a); // cha của vị trí muốn rotate. 
+                    if (b.info.name.compareTo(par.info.name) < 0) {
+                              par.left = b;
+                    } else {
+                              par.right = b;
+                    }
+          }
+
+          void preorder(Node p) {
+                    if (p == null) {
+                              return;
+                    }
+                    visit(p);
+                    preorder(p.left);
+                    preorder(p.right);
+          }
+
+          void rotateLeft() {
+                    searchNodeByPreOrder(root); // p must have right son
+//                    System.out.println(p);
+                    if (a == null) {
+                              return;
+                    } else {
+                              rotateLeft1(a);
+                    }
+                    preorder(root);
+          }
 //9. Calculate balance factor of all nodes. Display all node with balance factor by
 //breadth-first traverse.
+          int balanceFactor(Node p){
+                    return (height(p.right) - height(p.left));               
+          }
+          void showBalanceFactor(Node p){
+                    System.out.println("Node " + p.info + " is " + balanceFactor(p));
+          }
+          void BalanceFactorBFS(Node p) {
+                    if (p == null) {
+                              return;
+                    }
+                    MyQueue m = new MyQueue(); 
+                    m.enqueue(p);
+                    while (!m.isEmpty()) { 
+                              Node q = (Node) m.dequeue(); 
+                              showBalanceFactor(q);
+                              if (q.left != null) {
+                                        m.enqueue(q.left);
+                              }
+                              if (q.right != null) {
+                                        m.enqueue(q.right);
+                              }
+                    }
+          }
 //10.Check whether a given binary search tree is height balanced (AVL tree) or
 //not.
+          
 //11.Calculate level of all nodes. Display all node with level by breadth-first
 //traverse.
 //12.Balance a binary search tree by simple balancing algorithm.

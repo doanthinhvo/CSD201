@@ -37,16 +37,16 @@ public class BSTree {
                     // con phải nhất = max (rightmost)
 
 //                    tree.delByCopying(60);
-                    tree.preOrder();
-                    Node p = tree.search(tree.root, 14);
+//                    tree.preOrder();
+//                    Node p = tree.search(tree.root, 14);
 //                    System.out.println("height of " + p.info + " is " + tree.height(p));
-                    tree.rotateLeft(p);
-                    tree.preOrder();
+//                    tree.rotateLeft(p);
+//                    tree.preOrder();
 //                    System.out.println(tree.search(tree.root, 20).info);
 //                    System.out.println(tree.min(tree.root).info);
 //                    tree.count();
 //                    System.out.println(tree.sum(tree.root));
 //                    System.out.println(tree.avg());
-                    
+                    tree.BalanceFactor
           }
 }

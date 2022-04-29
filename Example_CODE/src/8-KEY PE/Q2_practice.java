@@ -512,6 +512,17 @@
         root = b.root; //referen root to root b
     } 
  
+ 
+ Node father(Node q){
+          Node f,p;
+          f=null;p=root;
+          while(p!=null)
+          {if(p == q) break;
+          f=p;
+          if(q.info.price < p.info.price)  p=p.left; else p=p.right;
+       }
+     return(f);
+    }
 //rotate left
     public Node rotateLeft(Node p){//must be have node right
         if(p.right == null){
@@ -522,6 +533,19 @@
         q.left = p;
         return q;
     }
+ 
+ void rotateLeft(Node p) { // hàm này chỉ cần nhập vào Node p cần xoay, khôngg cần qua trung gian hàm NodeRotate.
+    if (p == null || p.right == null) return;
+    Node c = p.right;
+    p.right = c.left;
+    c.left = p;
+    Node father = getParent(p);
+    if (father == null) root = c;
+    else {
+      if (father.info.color > p.info.color) father.left = c;
+      else father.right = c;
+    }
+  }
 
 //rotate right
     public Node rotateRight(Node p){
@@ -533,7 +557,19 @@
         q.right = p;
         return q;
     }
-
+void rotateRight(Node p) { // hàm này chỉ cần nhập node cần xoay thôi. (tức là không cần qua hàm Node rotateRight.
+        if (p == null || p.left == null) return;
+        Node c = p.left;
+        p.left = c.right;
+        c.right = p;
+        Node father = getParent(p);
+        if (father == null) root = c;
+        else {
+            if (father.info.price > p.info.price) father.left = c;
+            else father.right = c;
+        }
+    }
+ 
 //rotate any node
        public void rotateModifier(Node node){
         Node nodeRotate = rotateToRight(node);

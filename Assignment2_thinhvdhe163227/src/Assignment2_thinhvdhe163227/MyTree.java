@@ -126,6 +126,7 @@ public class MyTree {
                     visit(p);
                     }
           
+          // hàm chính
           void delete() {
                     Node p = searchNodeByBFS(root); // tìm node 
                     deleteByCopy(p); // xoá node 
@@ -145,11 +146,13 @@ public class MyTree {
                     m.enqueue(p);
                     while (!m.isEmpty()) {
                               Node q = (Node) m.dequeue();
+                              
+                              // visit(q)
                               if (q.info.age >= avg()) {
                                         count++;
                               }
                               if (count == 2) {
-                                        return q;
+                                        return q; 
                               }
                               if (q.left != null) {
                                         m.enqueue(q.left);
@@ -171,7 +174,7 @@ public class MyTree {
                               return;
                     }
                     if (p == null) {
-                              System.out.println("Key does not exists, deletion failed");
+//                              System.out.println("Key does not exists, deletion failed");
                               return;
                     }
 
