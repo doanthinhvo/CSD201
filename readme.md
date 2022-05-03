@@ -5,5 +5,3 @@
 | Assignment2_thinhvdhe163227           | Assignment 2                                                     |
 | CSD201 learning website               | Toàn bộ tài liệu học cho môn bao gồm slide, bài tập, assignment. |
 | CSD201_followup_lesson                | Code theo từng bài được học trên lớp                             |
-
-- Trong mỗi mục đều có file readme nào đó, ae nên đọc file đó trước khi xem nội dung. 
