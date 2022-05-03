@@ -20,3 +20,5 @@ Tương tự với Q1.
 
 **Q3** 
 *Edit file Graph.java*
+Thường sẽ có 2 hàm:
+- f1() 
