@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Hướng dẫn làm bài PE.md",
+            "file": "Hướng dẫn 1 đề cụ thể.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hướng dẫn làm bài PE.md",
+                "file": "Hướng dẫn 1 đề cụ thể.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "d3d9836fa4913cd9",
   "lastOpenFiles": [
+    "Hướng dẫn 1 đề cụ thể.md",
     "Hướng dẫn làm bài PE.md",
     "CSD201_followup_lesson/src/readme.md",
     "readme.md"
