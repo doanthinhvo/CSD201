@@ -14,9 +14,9 @@ Không cần quan tâm đến việc nó viết ra file.txt như thế nào. Ch�
 - F2, F3, F4 có thể là delete, add, sort, ... có điều kiện. Add cuối, đầu, giữa, add sau cái gì đó, sort theo khoảng, ...
 	- Với mỗi F, viết các hàm con đầy đủ rồi chỉ việc gọi 1, 2 dòng trong hàm F. (Hạn chế việc viết code trực tiếp trong các hàm f2(), f3(), f4() để tránh xoá nhầm gì đó.)	
 
-
 **Q2**
 *Edit file BSTree.java*
+Tương tự với Q1. 
 
 **Q3** 
 *Edit file Graph.java*
