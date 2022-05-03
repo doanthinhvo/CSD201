@@ -7,3 +7,6 @@ Edit file MyList.java.
 
 **Q2**
 Edit file BSTree.java
+
+**Q3** 
+Edit file Graph.java
