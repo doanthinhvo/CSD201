@@ -4,7 +4,9 @@
 - File Đối tượng.java (E.g: Bee.java, Car.java) xem các đối tượng này lấy tham số theo thứ tự thế nào. 
 **Q1** 
 *Edit file MyList.java*. 
-Bài này thường có 4 hàm f1, f2, f3, f4 
+Bài này thường có 4 hàm f1, f2, f3, f4
+
+Không cần quan tâm đến việc nó viết ra file.txt như thế nào. Chỉ cần viết hàm để xử lý List là được. 
 - F1 không cần edit nhưng cần viết hàm gì đó trước f1. E.g: addLast, addFirst...
 	- Các hàm này nên được viết thành 2 hàm như 
 		- addLast(Person x): để sau này lỡ cần thì có thể dễ gọi lại. 
