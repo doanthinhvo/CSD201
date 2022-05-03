@@ -24,4 +24,4 @@ Thường sẽ có 2 hàm:
 - f1() dùng DFS duyệt từ 1 đỉnh đến 1 đỉnh khác và hiển thị ra có điều kiện.(E.g: Từ đỉnh thứ 2 đến đỉnh thứ 6...)
 	- Copy hàm depth phía trên và sửa
 - f2() dùng Dijkstra tìm đường đi ngắn nhất từ 1 đỉnh đến đỉnh khác. In ra n (last vertices selected) hoặc shortest path, or các đỉnh được chọn (vertices selected into the set).
-	- Vào file 
+	- Vào code cacac copy hàm dijkstra và sửa mấy line in ra cuối theo đúng điều kiện bài. 
