@@ -9,7 +9,8 @@ Bài này thường có 4 hàm f1, f2, f3, f4
 	- Các hàm này nên được viết thành 2 hàm như 
 		- addLast(Person x): để sau này lỡ cần thì có thể dễ gọi lại. 
 		- addLast(String xName, int Xage): Check điều kiện đầu đề (như Age > 5 ...) và gọi lại hàm trên để add.  
-- F2: 	
+- F2, F3, F4 có thể là delete, add, sort, ... có điều kiện. Add cuối, đầu, giữa, add sau cái gì đó, sort theo khoảng, ...
+	- Với mỗi F, viết các hàm con đầy đủ rồi chỉ việc gọi 1, 2 dòng trong hàm F. (Hạn chế việc viết code trực tiếp trong các hàm f2(), f3(), f4() để tránh xoá nhầm gì đó.)	
 
 
 **Q2**
