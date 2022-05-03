@@ -7,11 +7,8 @@
         "id": "d3d9836fa4913cd9",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Hướng dẫn 1 đề cụ thể.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -52,8 +49,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5a1d256c86ecc2c9",
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hướng dẫn 1 đề cụ thể.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
